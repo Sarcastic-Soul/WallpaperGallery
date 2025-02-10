@@ -3,13 +3,13 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-export default defineConfig( ({mode}) =>{
+export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  return{
+  return {
     define: {
       'process.env': env
     },
     plugins: [react(), tailwindcss()],
-    base: "/WallpaperGallery"
+    base: "/WallpaperGallery/"
   }
 })
