@@ -2,7 +2,7 @@
 
 **WallpaperGallery** is a React-based web application that fetches high-quality images using the **Pexels API**. Users can browse curated images and search for specific wallpapers using the built-in search functionality.
 
-<img src="/public/WallpaperGallery SS.png" alt="WallpaperGallery Homepage" width="400"/>
+<img src="/public/WallpaperGallery SS.png" alt="WallpaperGallery Homepage"/>
 ---
 
 ### Features
