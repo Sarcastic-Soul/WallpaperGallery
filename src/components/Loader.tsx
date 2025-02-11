@@ -1,9 +1,6 @@
-// components/Loader.tsx
-import React, { forwardRef } from 'react';
+import { forwardRef } from 'react';
+import { LoaderProps } from '../typescript/Interface';
 
-interface LoaderProps {
-    ref?: React.Ref<HTMLDivElement>;
-}
 
 const Loader = forwardRef<HTMLDivElement, LoaderProps>(({ }, ref) => (
     <div ref={ref} className="flex justify-center p-8">

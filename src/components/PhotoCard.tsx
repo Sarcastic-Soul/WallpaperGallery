@@ -1,5 +1,5 @@
 import React from 'react';
-import { Photo } from '../interface/Photo';
+import { Photo } from '../typescript/Interface';
 
 interface PhotoCardProps {
     photo: Photo;

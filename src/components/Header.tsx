@@ -1,26 +1,8 @@
 import React, { useState } from 'react';
 import { FiFilter } from 'react-icons/fi';
 
-const colors = [
-    { name: 'red', hex: '#EF4444' },
-    { name: 'orange', hex: '#F97316' },
-    { name: 'yellow', hex: '#EAB308' },
-    { name: 'green', hex: '#22C55E' },
-    { name: 'turquoise', hex: '#14B8A6' },
-    { name: 'blue', hex: '#3B82F6' },
-    { name: 'violet', hex: '#8B5CF6' },
-    { name: 'pink', hex: '#EC4899' },
-    { name: 'brown', hex: '#92400E' },
-    { name: 'black', hex: '#000000' },
-    { name: 'gray', hex: '#6B7280' },
-    { name: 'white', hex: '#F9FAFB' },
-];
-
-const exampleTags = ['apple', 'cat', 'mountain', 'ocean', 'sunset', 'forest'];
-
-interface HeaderProps {
-    onSearch: (query: string, color: string) => void;
-}
+import { HeaderProps } from '../typescript/Interface';
+import { colors, exampleTags } from '../data/constants.ts';
 
 const Header: React.FC<HeaderProps> = ({ onSearch }) => {
     const [query, setQuery] = useState('');
@@ -47,6 +29,7 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                 {/* Title */}
                 <h1 className="text-5xl my-2 font-bold text-gray-800 text-center">Wallpaper Gallery</h1>
 
+                {/* Search Bar */}
                 <form onSubmit={handleSubmit} className="flex gap-2 justify-center mb-2">
                     <input
                         type="text"
@@ -92,8 +75,6 @@ const Header: React.FC<HeaderProps> = ({ onSearch }) => {
                         </div>
                     </div>
                 </div>
-
-                {/* Search Bar */}
 
             </div>
         </header>

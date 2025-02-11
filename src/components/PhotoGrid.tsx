@@ -1,11 +1,8 @@
 import React from 'react';
 import PhotoCard from './PhotoCard';
-import { Photo } from '../interface/Photo';
+import { PhotoGridProps } from '../typescript/Interface';
 
-interface PhotoGridProps {
-    photos: Photo[];
-    onPhotoClick: (photo: Photo) => void;
-}
+
 
 const PhotoGrid: React.FC<PhotoGridProps> = ({ photos, onPhotoClick }) => {
     return (

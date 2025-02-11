@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
-import { Photo } from '../interface/Photo';
 import { FaDownload, FaShareAlt, FaTimes } from 'react-icons/fa';
+import { PhotoModalProps } from '../typescript/Interface';
 
-interface PhotoModalProps {
-    photo: Photo | null;
-    onClose: () => void;
-}
 
 const PhotoModal: React.FC<PhotoModalProps> = ({ photo, onClose }) => {
     const [toast, setToast] = useState("");
@@ -40,7 +36,7 @@ const PhotoModal: React.FC<PhotoModalProps> = ({ photo, onClose }) => {
     return (
         <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm bg-black/40"
-            onClick={onClose} // Close modal when clicking outside the image
+            onClick={onClose} 
         >
             <div className="relative max-w-4xl w-full" onClick={(e) => e.stopPropagation()}>
                 <img

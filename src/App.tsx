@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
+
 import axios from 'axios';
 import Header from './components/Header';
 import PhotoGrid from './components/PhotoGrid';
 import PhotoModal from './components/PhotoModal';
 import Loader from './components/Loader';
-import { Photo } from './interface/Photo';
 
-interface PexelsResponse {
-  photos: Photo[];
-}
+import { Photo, PexelsResponse } from './typescript/Interface';
+
 
 const API_KEY = process.env.REACT_APP_PEXEL_API_KEY;
 
@@ -27,7 +26,7 @@ const App: React.FC = () => {
 
     try {
       let url = query
-        ? `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&page=${page}` // Made to avoid CORS, BAD PRACTICE
+        ? `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&page=${page}`
         : `https://api.pexels.com/v1/curated?page=${page}`;
 
       if (color) {
