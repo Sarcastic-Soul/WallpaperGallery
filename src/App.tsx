@@ -26,10 +26,9 @@ const App: React.FC = () => {
     setLoading(true);
 
     try {
-      /...')
       let url = query
-        ? `https://cors-anywhere.herokuapp.com/https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&page=${page}` // Made to avoid CORS, BAD PRACTICE
-        : `https://cors-anywhere.herokuapp.com/https://api.pexels.com/v1/curated?page=${page}`;
+        ? `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&page=${page}` // Made to avoid CORS, BAD PRACTICE
+        : `https://api.pexels.com/v1/curated?page=${page}`;
 
       if (color) {
         url += `&color=${color}`;
